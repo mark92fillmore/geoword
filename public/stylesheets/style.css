@@ -1,0 +1,68 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*#input {
+	height: 50px;
+}*/
+
+.mouseOn {
+	background-color: #87CEFA;
+}
+
+#a {
+	position: absolute;
+	top: 400px;
+}
+
+/* TODO: clean all of this up */
+#scroll {
+	/*border: solid;*/
+	width: 363px;
+	height: 200px;
+	max-height: 200px;
+	overflow: auto;
+	clear: both;
+}
+
+#tbl {
+	display: block;
+	border: solid;
+	width: 355px; 
+	max-height: 200px;
+	position: absolute; 
+	text-align: left; 
+	overflow: auto;
+	/*z-index: -1;
+	background-color: white;*/
+}
+
+#tb {
+	display: block;
+	width: 355px;
+	max-height: 200;
+	z-index: -1;
+	overflow: scroll;
+}
+
+#geo {
+	border: groove;
+	width: 355px;
+	height: 14px;
+	font: Arial;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#map {
+	width: 700px;
+	height: 400px;
+	position: absolute;
+	right: 50px;	
+	top: 50px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GeoWORD</title>
+
+    <meta name="description" content="PLoM.io Public Library of Models" />
+    <meta name="keywords" content="PLoM model data inference social" />
+
+    <link rel="stylesheet" media="screen" type="text/css" href="/stylesheets/style.css" />
+
+    <script src="/lib/jquery-2.0.3.min.js"></script>
+    <script src="/lib/jquery.form.min.js"></script>
+    <script src='http://d3js.org/d3.v3.min.js'></script>
+
+    <script src="/javascripts/index.js"></script>
+
+  </head>
+
+  <body>
+
+    <h1>Find Map</h1>
+    
+    <form id="read" action="/test" method="post">
+      <button for="submit" id="test"> Update Maps </button>
+    </form>
+    
+    <p></p>
+    
+    <form id="input" action="/within" method="post" enctype="multipart/form-data"> 
+      <input id="geo" type="text" name="geo" autocomplete="off" placeholder="Enter a City, State, or Country"/> 
+      <button id="find"> $geoWithin </button>
+      <div id="scroll" hidden>
+        <table cellspacing="0" cellpadding="2" id="tbl" hidden="true">
+          <tbody id="tb"></tbody>
+        </table>
+      </div>
+      <button for="submit" id="gMap" hidden> I Should Be Hidden!! </button>
+    </form>
+    
+    <form id="c" action="/count" method="post" hidden>
+      <button for="submit"> Count </button>
+    </form>
+
+    <form id="a" action="/add" method="post" enctype="multipart/form-data">
+      <label for="p"> Place: </label>
+      <input id="p" name="p" autocomplete="off"/> 
+      <label for="lat"> Latitude: </label>
+      <input id="lat" name="lat" autocomplete="off"/>
+      <label for="lon"> Longitude: </label>
+      <input id="lon" name="lon" autocomplete="off"/>
+      <p></p>
+      <button for="submit"> Submit </button>
+    </form>
+    
+    
+
+    <div id="map"></div>
+
+  </body>
+
+
+</html>
